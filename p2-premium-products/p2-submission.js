@@ -37,4 +37,7 @@ const products = [
     }
 ];
 //filter premium products
+
+let premium = products.filter((item)=> item.price >= 300 )
 //Write code here
+console.log(premium);

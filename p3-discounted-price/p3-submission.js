@@ -1,4 +1,4 @@
-const products = [
+ const products1 = [
     {
         productName: 'Gucci Round Bucklet Belt',
         price: 400
@@ -38,5 +38,13 @@ const products = [
 ];
 
 //Find the discounted price fro non-premium products
+let nonPremium = products1.filter((item) => item.price < 300 );
 
-///Write code here
+//Write code here
+
+let discountedPrice = nonPremium.map((item) => {
+     item.price = item.price - (item.price * 15/100);
+    return item;
+} )
+
+console.log(discountedPrice);
